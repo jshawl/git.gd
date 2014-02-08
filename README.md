@@ -1,4 +1,5 @@
-vanilla
-=======
+# Git Good
 
-the starting point of every new project
+A place for getting good at git.
+
+
