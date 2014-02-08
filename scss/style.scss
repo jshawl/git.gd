@@ -1,0 +1,115 @@
+@import 'normalize';
+$teal: #17AF91;
+$black:#272727;
+$accent:lighten($black, 10%);
+
+@import 'buttons';
+
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  background:#272727;
+  text-align:center;
+  font-family:'PT Serif';
+}
+
+h1, h2{
+  color:$teal;
+  font-family:'PT Sans Narrow';
+}
+
+h1{
+  text-transform:uppercase;
+  font-size:5em;
+  margin-bottom:0;
+  margin-top:2em;
+  text-shadow:3px 3px 0px darken($teal, 30%);
+}
+
+h2{
+  font-family:'PT Serif';
+  font-weight:300;
+  color:#aaa;
+  margin-top:0;
+  font-size:1.25em;
+}
+
+p{
+  //font-family:'PT Sans Narrow';
+  font-size:1em;
+  color:#aaa;
+  margin:auto;
+  margin-top:2em;
+  margin-bottom:2em;
+  max-width:450px;
+  background:$accent;
+  padding:3em;
+}
+
+input{
+  border:none;
+  border-radius:0;
+  background:#fff;
+  border-width:5px 0 0 5px;
+  border-color: #ddd transparent transparent #aaa;
+  border-style:solid;
+  outline:none;
+  padding:1em;
+}
+
+button{
+  background:$teal;
+  color:#fff;
+  font-family:inherit;
+  border:none;
+  outline:none;
+  padding:1em;
+}
+
+form{
+  margin-bottom:3em;
+}
+
+
+$offsetX:-20px;
+$offsetY:22px;
+
+hr{
+  position:relative;
+  display:block;
+  width:100px;
+  height:5px;
+  background:$accent;
+  margin:0em auto 4em auto;
+  border:none;
+  position:relative;
+  &:before,
+  &:after{
+    content:'';
+    display:block;
+    position:absolute;
+  }
+  &:after{
+    left:100%;
+    top:50%; 
+    transform:translateY(-50%) translateX(-2px);
+    width:8px;
+    height:8px;
+    background:#272727;
+    border:3px solid $accent;
+    border-radius:100%;
+    box-shadow:$offsetX $offsetY 0px -3px #272727,
+               $offsetX $offsetY 0px $accent; 
+  }
+  &:before{
+    width:40%;
+    height:5px;
+    background:$accent;
+    transform:rotate(30deg);
+    transform-origin:0 0;
+    left:50%;
+  }
+}
+

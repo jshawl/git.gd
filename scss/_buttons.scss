@@ -1,0 +1,29 @@
+@function boxShadowString($offset, $color) {
+  $box-shadow:();
+  @for $i from 0 through $offset{
+    $first: $i+1+px $i+px 0px darken($color, 15%);
+    $second: $i+px $i+1+px 0px darken($color, 18%);
+    $box-shadow: append($box-shadow, $first, comma);
+    $box-shadow: append($box-shadow, $second, comma);
+  }
+  @return $box-shadow;
+}
+
+@mixin threeDify($offset, $color){
+    box-shadow:boxShadowString($offset, $color);
+    &:hover{
+      box-shadow:boxShadowString($offset+2, $color);
+      transform:translate(-2px,-2px);
+    }
+    &:active{
+      box-shadow:boxShadowString(1, $color);
+      transform:translate($offset - 1+px, $offset - 1+px);
+    }
+}
+
+button{
+  @include threeDify(3, $teal);
+  margin-left:-5px;
+  position:relative;
+  top:-3px;
+}
