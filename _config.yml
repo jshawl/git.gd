@@ -1,0 +1,11 @@
+# Site settings
+title: Git Good
+email: jesse@git.gd
+description: "A place for getting good at git"
+baseurl: ""
+url: "http://git.gd"
+username: jshawl
+
+# Build settings
+markdown: kramdown
+permalink: /:title/

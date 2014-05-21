@@ -1,137 +1,22 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width">
-    <script type="text/javascript" src="//use.typekit.net/dsl4dcd.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <style>
+---
+layout: default
+---
 
-      body{
-        width:80%;
-	max-width:35em;
-	margin-left:10%;
-	font-size:1.5em;
-	font-family:'Effra', Helvetica, sans-serif;
-	color:#333;
-	padding:3em 0; }
-      @media all and (max-width:30em){
-        body{
-	  font-size:1em;
-	  padding-top:1em;
-	}
-      }
+<div class="home">
 
+  <h1>Posts</h1>
 
-	header h1{
-	  margin:0; }
-
-      ul{
-	margin-bottom:0;
-        padding:0; }
-
-      h2{
-        background:#F44D27;
-	background:#333;
-	color:#fff;
-	font-weight:100;
-	padding:.25em 0;
-	padding-left:.5em;
-	margin-left:-.5em;
-	position:relative; }
-      h2:after{
-        content:'';
-	display:block;
-	background:#F44D27;
-	height:100%;
-	top:0;
-	position:absolute;
-	width:100%;
-	right:100%;
-      }
-
-      h3{
-	margin-bottom:0; 
-        color:#333;
-	font-weight:500;
-	padding-left:.5em;
-	margin-left:-.5em;
-      }
-
-      small{
-        font-style:italic;
-	font-size:.8em;
-	color:#666; }
-
-      li{
-        list-style:none;
-        border-bottom:1px solid #eee;
-	padding-bottom:1em;
-	margin-bottom:1em; }
-      li:last-child{
-        border-width:0;
-	margin-bottom:0;
-      }
-
-      a{
-        color:#F44D27;
-	text-decoration:none; }
-
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Git Good.</h1>
-      <small>A curated list of resources for helping you learn git, by <a href='https://twitter.com/jshawl'>@jshawl</a></small>
-    </header>
-    
-    <h2>Beginner</h2>
-    <ul>
+  <ul class="posts">
+    {% for post in site.posts %}
+    {% unless post.type == "page" %}
       <li>
-	<a href='http://try.github.io/'>
-	  <h3>try.github.io </h3>
-	  <small>http://try.github.io/</small>
-	</a>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </li>
-      <li>
-	<a href='http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything'>
-	  <h3>A Command Line Primer for Beginners</h3>
-	  <small>http://lifehacker.com/</small>
-	</a>
-      </li>
-      <li>
-	<a href='http://rogerdudler.github.io/git-guide/'>
-	  <h3>git - the simple guide</h3>
-	  <small>http://rogerdudler.github.io/git-guide/</small>
-	</a>
-      </li>
-      <li>
-	<a href='http://git-scm.com/book/en/Getting-Started-About-Version-Control'>
-	  <h3>About Version Control</h3>
-	  <small>http://git-scm.com/</small>
-	</a>
-      </li>
-    </ul>
+    {% endunless %}
+    {% endfor %}
+  </ul>
 
-    <h2>Intermediate</h2>
-    <ul>
-      <li>
-	<a href='http://gitready.com/'>
-	  <h3>git ready</h3>
-	  <small>http://gitready.com/</small>
-	</a>
-      </li>
-      <li>
-	<a href='http://gitready.com/intermediate/2009/03/16/rolling-back-changes-with-revert.html'>
-	  <h3>Rolling Back Changes with Revert</h3>
-	  <small>http://gitready.com/</small>
-	</a>
-      </li>
-      <li>
-	<a href='http://stackoverflow.com/questions/4114095/revert-to-previous-git-commit'>
-	  <h3>Revert to previous git commit</h3>
-	  <small>http://stackoverflow.com/</small>
-	</a>
-      </li>
-    </ul>
-  </body>
-</html>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
