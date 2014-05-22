@@ -31,7 +31,7 @@ The first step is to run `git help config` and search for `push.default`.
 
     $ git help config
 
-When the help page pops up, it looks like this btw:
+When the help page pops up, it looks like this:
 
 ![](https://dl.dropboxusercontent.com/u/2241201/Screenshot%202014-05-21%2021.32.33.png)
 
