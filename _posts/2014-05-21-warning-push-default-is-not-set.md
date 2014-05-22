@@ -25,7 +25,7 @@ I confess, I've been seeing this message for weeks (months)? and have done nothi
 the warning message. 
 
 Let's break it down and see what it means and what we can do to prevent it from cluttering
-our terminal and making me feel uneasy.
+our terminal.
 
 The first step is to run `git help config` and search for `push.default`.
 
