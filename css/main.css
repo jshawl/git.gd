@@ -148,7 +148,14 @@ a:visited { color: #205caa; }
 
 .posts { list-style-type: none; }
 
-.posts li { margin-bottom: 30px; }
+.posts li { margin-bottom: 30px; position:relative; }
+
+.posts .number{
+  line-height:1;
+  display:inline-block;
+  font-size: 24px;
+  color:#818181;
+}
 
 .posts .post-link {
   font-size: 24px;
@@ -358,8 +365,20 @@ a:visited { color: #205caa; }
     -moz-border-radius: 5px;
     border-radius: 5px;
     border: 1px solid #e8e8e8;
+    padding-top:36px;
+    min-width:36px;
   }
 
+  .site-nav .trigger {
+    clear: both;
+    margin-bottom: 5px;
+    display: none;
+  }
+  .site-nav .trigger:empty + .menu-icon {
+    display: none;
+  }
+
+  
   .site-nav .menu-icon {
     display: block;
     font-size: 24px;
@@ -368,15 +387,13 @@ a:visited { color: #205caa; }
     width: 36px;
     text-align: center;
     line-height: 36px;
+    position:absolute;
+    top:0;
+    right:0;
   }
 
   .site-nav .menu-icon svg { width: 18px; height: 16px; }
 
-  .site-nav .trigger {
-    clear: both;
-    margin-bottom: 5px;
-    display: none;
-  }
 
   .site-nav:hover .trigger { display: block; }
 
