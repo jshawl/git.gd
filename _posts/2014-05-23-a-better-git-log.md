@@ -22,3 +22,6 @@ and even displays all of this information in an attractive and readable graph.
 You can either add the whole git log line as an alias in your `~/.bash_profile` or as a git alias in your `~/.gitconfig`.
 
 Do you use something different? Let's see it!
+
+Looking for the available options? Try running `git help log` in the terminal. Or you can check out the relevant pages 
+from "Pro Git" - <http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History>
