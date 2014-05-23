@@ -5,7 +5,11 @@ title: Clean up Commits with git cherry-pick -n
 
 Sometimes I binge code for like 3+ hours and work on several unrelated things.
 Since I'm so in the zone, I often forget to commit regularly, and am left
-with a bunch of changes not yet staged for commit when I take a break.
+with a bunch of changes not yet staged for commit when I take a break:
+
+![](https://dl.dropboxusercontent.com/u/2241201/Screenshot%202014-05-23%2015.50.33.png)
+
+ffffffaaaacccckkkkkk!!!!!!!
 
 First, I stage the changes:
 
