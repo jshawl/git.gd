@@ -411,3 +411,9 @@ a:visited { color: #205caa; }
     margin: 0 0 15px; }
 
 }
+
+.edit{
+  display:inline-block;
+  border:2px solid #2a7ae2;
+  padding:.5em 1em;
+}
